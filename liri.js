@@ -1,8 +1,12 @@
+
+
 //At the top of the liri.js file make it so you grab the data from keys.js and store it into a variable to use
 // node.js: Using require to load my own files
-var twitter = require('./keys.js');
+var twitter = require('twitter');
 //Make it so liri.js can take in my-Tweets
+var keys = require('./keys.js');
 
+var twitterKeys = keys.twitterKeys;
 
 function myTweets() {
   var client = new twitter({
@@ -11,4 +15,5 @@ function myTweets() {
     access_token_key:  twitterKeys.access_token_key,
     access_token_secret: twitterKeys.access_token_secret  
   });
+  }
   
